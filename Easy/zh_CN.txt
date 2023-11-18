@@ -1,0 +1,25 @@
+
+
+(.*一言.*|随机一言|一言)
+A:$访问 https://v1.hitokoto.cn/$
+B:$JSON€%A%€[id]$
+C:$JSON€%A%€[hitokoto]$
+D:$JSON€%A%€[k]$
+E:$JSON€%A%€[from]$
+F:$JSON€%A%€[from_who]$
+一言ID：%B%\r
+本次一言：%C%\r
+一言类型：%D%\r
+—来自%E%的作者%F%\r
+%时间yyyy年MM月dd日%\r
+%时间HH:mm:ss%
+
+
+
+(.*测试.*|测试效果|测试)
+测试通过
+
+(抖动|.*抖动)
+±ATmsg±\r
+抖动成功……\r
+±shake±
