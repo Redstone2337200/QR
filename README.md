@@ -5,7 +5,7 @@ Store QQ robot source code films
 The early QQ robot still has a lot of functions to be completed, and it will be updated later, although it is not ready to be updated.
 
 ### Contact information
->QQ：3356168312
+>QQ：3356168312 <br>
 WeChat：RTX-Redstone2337200
 
 
@@ -54,8 +54,36 @@ while True:
         print("The robot doesn't seem to want to talk to you...")
 ```
 
+### html
+```hypertext markup language
+<!DOCTYPE html>
+<html>
+<head>
+	<title>随机一言</title>
+</head>
+<body>
+	<h1>随机一言</h1>
+	<p id="hitokoto"></p>
+
+	<script>
+		// 一言的API接口
+		var url = "https://v1.hitokoto.cn/";
+
+		// 发送HTTP请求，获取一言内容
+		fetch(url)
+			.then(response => response.json())
+			.then(data => {
+				// 输出一言内容
+				document.getElementById("hitokoto").innerText = data.hitokoto;
+			})
+			.catch(error => console.error(error));
+	</script>
+</body>
+</html>
+```
+
 ### More Information
 `
-There is no more information.
+There is no more information.  <br>
 But all developers can add new code.
 `
