@@ -13,18 +13,17 @@ WeChat：RTX-Redstone2337200
 0.0.0.0.0.1 Alpha Beta version.
 
 ### Code
-
-`
+```python
 import requests
 import time
 
-#API interface
+# 一言API接口
 api_url = "https://v1.hitokoto.cn/"
 
-#The last time the message was sent.
+# 上次发送消息的时间
 last_send_time = 0
 
-#Get a Word Code
+# 获取一言
 def get_yiyan():
     response = requests.get(api_url)
     if response.status_code == 200:
@@ -33,7 +32,7 @@ def get_yiyan():
     else:
         return "获取一言失败，请稍后再试"
 
-#QQROBOT
+# QQ机器人
 while True:
     # 获取当前时间
     now = time.time()
@@ -53,4 +52,9 @@ while True:
         last_send_time = now
     else:
         print("机器人不理你...")
-`python`
+```
+
+### More Information
+`
+There is no more information.
+`
