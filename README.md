@@ -55,6 +55,7 @@ while True:
 ```
 
 ### More Information
-`text
+`
 There is no more information.
+But all developers can add new code.
 `
