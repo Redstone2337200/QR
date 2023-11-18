@@ -1,2 +1,56 @@
 # QR
 Store QQ robot source code films
+
+## About this QQRobot
+The early QQ robot still has a lot of functions to be completed, and it will be updated later, although it is not ready to be updated.
+
+### Contact information
+>QQ：3356168312
+WeChat：RTX-Redstone2337200
+
+
+### About Versions
+0.0.0.0.0.1 Alpha Beta version.
+
+### Code
+
+`
+import requests
+import time
+
+#API interface
+api_url = "https://v1.hitokoto.cn/"
+
+#The last time the message was sent.
+last_send_time = 0
+
+#Get a Word Code
+def get_yiyan():
+    response = requests.get(api_url)
+    if response.status_code == 200:
+        data = response.json()
+        return data["hitokoto"]
+    else:
+        return "获取一言失败，请稍后再试"
+
+#QQROBOT
+while True:
+    # 获取当前时间
+    now = time.time()
+
+    # 如果距离上次发送消息的时间小于5秒，则不做处理
+    if now - last_send_time < 5:
+        time.sleep(1)
+        continue
+
+    # 否则，等待用户输入消息
+    msg = input("请输入消息：")
+
+    # 如果用户输入“一言”，则获取一言并回复
+    if msg == "一言":
+        reply = get_yiyan()
+        print("机器人回复：", reply)
+        last_send_time = now
+    else:
+        print("机器人不理你...")
+`python`
