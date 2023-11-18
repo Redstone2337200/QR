@@ -84,6 +84,6 @@ while True:
 
 ### More Information
 `
-There is no more information.  <br>
+There is no more information. <br>
 But all developers can add new code.
 `
