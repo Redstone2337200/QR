@@ -12,8 +12,8 @@ $data modify storage ca: tmp.string set value $(string)
 data modify storage ca: output set value {}
 data modify storage ca: output.uuid set from storage ca: tmp.string.hoverEvent.contents.id
 ```
-
-& the item modifier:```json
+### the item modifier:
+```json
 // # item_modifier ml:gnr/method/uuid
 {
     "function":"set_name",
